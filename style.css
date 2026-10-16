@@ -46,6 +46,11 @@ body {
   color: #e67e22;
 }
 
+#menu-toggle,
+.burger {
+  display: none;
+}
+
 /* ----- Section Hero ----- */
 .hero {
   display: flex;
@@ -150,4 +155,57 @@ footer {
   .hero h1 {
     font-size: 2rem;
   }
+
+  .burger {
+    display: block;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #172554;
+  }
+
+  /* Quand la case est cochée, afficher le menu */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+/* ----- Formulaire ----- */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 1.5rem auto;
+  text-align: left;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reservation-form button {
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }

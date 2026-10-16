@@ -8,8 +8,14 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Anty Armelle</div>
-    <nav>
+    <div class="logo">Anty Armelle</div> 
+     <nav class="navbar">
+      <input type="checkbox" id="menu-toggle">
+
+      <label for="menu-toggle" class="burger">
+        ☰
+      </label>
+  
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -76,9 +82,31 @@
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>12 Street Lilas, 75000 City</p>
-      <p>Phone : 01 23 45 67 89</p>
+      <h2>Reserve a table</h2>
+      <form class="reservation-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="people">Number of people</label>
+        <select id="people" name="people">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 or more</option>
+        </select>
+
+        <button type="submit" class="btn">Send</button>
+      </form>
+
+  <p>12 rue des Lilas, 75000 Ville</p>
+  <p>Téléphone : 01 23 45 67 89</p>
     </section>
   </main>
 
